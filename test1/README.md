@@ -30,6 +30,11 @@
 ![oracle select1](./select2.png)
 
 ## 查询3：
-
-
+`
+SELECT
+    count(employees.employee_id) as "部门总人数",
+    avg(employees.salary)as "平均工资"
+FROM employees,departments
+WHERE employees.department_id=departments.department_id and (departments.department_id=60 or  departments.department_id=80)
+`
 
