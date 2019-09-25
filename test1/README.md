@@ -16,6 +16,9 @@
     GROUP BY d.department_name;
 `
 ![oracle select1](./select1.png)
+## 解释计划
+![](./sql1.1.png)
+### 没有优化建议
 ## 查询2：
 `
     set autotrace on
@@ -26,15 +29,32 @@
     GROUP BY d.department_name
     HAVING d.department_name in ('IT','Sales');
 `
-
 ![oracle select1](./select2.png)
-
+## 解释计划
+![](./sql2.1.png)
+### 无优化建议
 ## 查询3：
 `
 SELECT
-    count(employees.employee_id) as "部门总人数",
-    avg(employees.salary)as "平均工资"
-FROM employees,departments
-WHERE employees.department_id=departments.department_id and (departments.department_id=60 or  departments.department_id=80)
+   d.department_name,count(e.job_id)as "部门总人数",avg(e.salary)as "平均工资"
+FROM  hr.departments d,hr.employees e
+WHERE e.department_id=d.department_id and (d.department_id=60 or  d.department_id=80) group by d.department_name
 `
+![](./sql3.2.png)
+
+### 解释计划
+![](./sql3.1.png)
+### 无优化建议
+
+# 分析和比较三个sql语句的执行计划
+| 查询sql | consistent gets | 
+| :-----: | :-----:       |
+| sql1   |   9             |
+| sql2     |   8             |
+| sql3     |   15             |
+
+一般来说consistent gets 越小越好，则sql2  >  sql1  >  sq3
+
+执行计划的比较不单单从consistent gets考虑，应该综合考虑所有因素，比如递归调用、索引、全局等等！但如果要说优先权的话，一般看consistent gets。
+
 
