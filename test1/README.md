@@ -59,7 +59,7 @@ WHERE e.department_id=d.department_id and (d.department_id=60 or  d.department_i
 | sql2     |   8             |   |
 | sql3     |   15             |   |
 
-一般来说consistent gets 越小越好，则sql2  >  sql1  >  sq3
+一般来说consistent gets 越小越好，则sql2  >  sql1  >  sq3 ，则sql2查询语句最优。
 
 执行计划的比较不单单从consistent gets考虑，应该综合考虑所有因素，比如递归调用、索引、全局等等！但如果要说优先权的话，一般看consistent gets。
 physical reads 和 consistent gets 通常是我们最关心的，如果physical reads 很高，说明要从磁盘请求大量的的数据到Buffer Cache 里，通常意味着系统里存在大量全表扫描的SQL语句，这会影响数据库的性能，因此尽量避免语句做全局扫描，对于全局扫描的SQL语句，建议增加相关的索引，优化SQL语句来解决。
