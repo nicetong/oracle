@@ -43,3 +43,9 @@ SQL>SELECT a.tablespace_name "表空间名",Total/1024/1024 "大小MB",
 
 # 在teacher表中查询用户
 ![teacher](./teacher.png)
+
+
+# 知识点总结
+掌握用户管理、角色管理、权根维护与分配的能力，掌握用户之间共享对象的操作技能。
+
+## 用户管理
