@@ -97,4 +97,3 @@ NOCOMPRESS NO INMEMORY
 # 运行实验三脚本
 ![test3.sql](./images/测试.png)
 
-# 查看数据库的使用情况
