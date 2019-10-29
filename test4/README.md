@@ -4,7 +4,7 @@
 ## - 实验场景：
 假设有一个生产某个产品的单位，单位接受网上订单进行产品的销售。通过实验模拟这个单位的部分信息：员工表，部门表，订单表，订单详单表。
 # 授权
-![](./images/1.png)
+!["加载中..."](./images/1.png)
 ## 下面是手工增加的一个表空间niceTong
 ```
     Create Tablespace niceTong
@@ -15,7 +15,7 @@ datafile
   SIZE 100M AUTOEXTEND ON NEXT 256M MAXSIZE UNLIMITED
 EXTENT MANAGEMENT LOCAL SEGMENT SPACE MANAGEMENT AUTO;
 ```
-![](./images/2.png)
+!["加载中..."](./images/2.png)
 # 创建用户STUDY_niceTong 
 ```
  CREATE USER STUDY_niceTong IDENTIFIED BY 123
@@ -23,26 +23,26 @@ DEFAULT TABLESPACE "USERS"
 TEMPORARY TABLESPACE "TEMP";
 ```
 # 授权
-![](./images/4.png)
+!["加载中..."](./images/4.png)
 
 ##  DDL for Table DEPARTMENTS
-![](./images/5.png)
+!["加载中..."](./images/5.png)
 
 ## DDL for Table EMPLOYEES
-![](./images/6.png)
+!["加载中..."](./images/6.png)
 
 ##   DDL for Table ORDER_ID_TEMP
 
-![](./images/7.png)
+!["加载中..."](./images/7.png)
 ##   DDL for Table ORDERS
-![](./images/8.png)
+!["加载中..."](./images/8.png)
 # 创建3个触发器
 ## DDL for Trigger ORDERS_TRIG_ROW_LEVEL
-![](./images/9.png)
+!["加载中..."](./images/9.png)
 --批量插入订单数据之前，禁用触发器
-![](./images/10.png)
+!["加载中..."](./images/10.png)
 ##  DDL for Trigger ORDER_DETAILS_ROW_TRIG
-![](./images/11.png)
+!["加载中..."](./images/11.png)
 ALTER TRIGGER "ORDER_DETAILS_ROW_TRIG" DISABLE;
 
 ##  DDL for Trigger ORDER_DETAILS_SNTNS_TRIG
@@ -69,13 +69,13 @@ END;
 ```
 
 ## DDL for View VIEW_ORDER_DETAILS
-![](./images/12.png)
+!["加载中..."](./images/12.png)
 --插入DEPARTMENTS，EMPLOYEES数据
-![](./images/13.png)
+!["加载中..."](./images/13.png)
 --批量插入订单数据，注意ORDERS.TRADE_RECEIVABLE（订单应收款）的自动计算,注意插入数据的速度
 --2千万条记录，插入的时间是：18100秒（约5小时）
 
-![](./images/14.png)
+!["加载中..."](./images/14.png)
 --最后动态增加一个PARTITION_BEFORE_2018分区：
 ```
 ALTER TABLE ORDERS
@@ -87,31 +87,33 @@ NOCOMPRESS;
 ```
 
 ## 一切就绪，开始测试：
-![](./images/15.png)
+!["加载中..."](./images/15.png)
 
 --2.递归查询某个员工及其所有下属，子下属员工。
-![](./images/16.png)
+!["加载中..."](./images/16.png)
 --特殊查询语句：
 --查询分区表情况:
-![](./images/17.png)
+!["加载中..."](./images/17.png)
 --查询一个分区中的数据
-![](./images/18.png)
+!["加载中..."](./images/18.png)
 --收集表的统计信息dbms_stats.gather_table_stats
 --也可以使用ANALYZE TABLE TableName COMPUTE STATISTICS; 但推荐使用dbms_stats.gather_table_stats
 --分析单个表：
 --exec dbms_stats.gather_table_stats(user,'ORDERS',cascade=>true); --cascade=true表示同时收集索引的信息
 --exec dbms_stats.gather_table_stats(user,'ORDER_DETAILS',cascade=>true);
 --统计用户的所有表：
+```
 exec dbms_stats.gather_schema_stats(User,estimate_percent=>100,cascade=> TRUE); --estimate_percent采样行的百分比
+```
 --统计完成后，查询表的统计信息：
+```
 select table_name,tablespace_name,num_rows from user_tables where table_name='ORDERS';
 select table_name,tablespace_name,num_rows from user_tables where table_name='ORDER_DETAILS';
-
-
 select * from orders where order_id=1300;
 select * from ORDER_DETAILS where order_id=1300;
 select * from orders where customer_name='zhang133000';
 select * from orders where order_date<to_date('2016-01-01','yyyy-mm-dd');
-![](./images/19.png)
+```
+!["加载中..."](./images/19.png)
 
 
