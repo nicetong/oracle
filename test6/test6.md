@@ -649,10 +649,8 @@
 </tbody>
 </table>
 <p>&nbsp;</p>
-<ol start="3">
-<li><a name="_Toc28214"></a>创建数据库</li>
-</ol>
-<p><a name="_Toc10050"></a>3.1配置插接式数据库PDB</p>
+<a name="_Toc28214"></a><h1>创建数据库</h1>
+<h2><a name="_Toc10050"></a>3.1配置插接式数据库PDB</h2>
 <p>配置插接式数据库PDB可以通过SQL语句创建插接式数据库，在创建时可以选择创建一个新的空的PDB，不包含任何数据；也可以选择一个现有的PDB克隆成另一个PDB，所谓克隆，是指将原有的PDB的用户信息和数据信息一起复制到新的PDB中，这也是Oracle 12C的重要特性。</p>
 <p>在这儿，我们通过dbca工具创建插接式数据库，首先以Oracle用户登录，运行dbca命令，然后根据提示操作，要注意输入正确的数据库目录、PDB数据库名称以管理员信息。</p>
 <p>&nbsp;</p>
@@ -662,16 +660,14 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><a name="_Toc26041"></a>3.2通过Oracle SQL Developer连接数据库</p>
+<h2><a name="_Toc26041"></a>3.2通过Oracle SQL Developer连接数据库</h2>
 <p>Oracle SQL Developer是一个免费的GUI图形界面的管理和开发工具，可以提高工作效率并简化数据库开发任务。SQL Developer可以在没有安装数据库的客户端上运行，支持Windows、Linux、Mac系统。</p>
 <p>可以在Oracle官网上下载，直接使用，无需安装。Oracle SQL Developer是基于Java的应用程序，如果客户端没有安装Java，就需要下载自带有Java的SQL Developer，如果客户端已经安装了Java，就可以下载不带Java版本。</p>
 <p>&nbsp;</p>
 <p><img src='./images/3-2.png'>图 3-2&nbsp;甜点商城通过SQL Developer连接Oracle</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<ol start="4">
-<li><a name="_Toc3886"></a>用户创建与空间分配</li>
-</ol>
+<a name="_Toc3886"></a><h1>用户创建与空间分配</h1>
 <p>表的结构设计之后，还需要考虑用户和空间的分配问题。我们需要为系统新建一个用户（NICETONG）。另外还需要为甜点商城系统创建一个新表空间NICETONG用户存储订单记录。</p>
 <p>下面是SYSTEM用户创建的一个表空间nicetong的命令，注意给nicetong表空间分配了两个数据文件：pdbtest_nicetong1.dbf和pdbtest_nicetong2.dbf，这两个数据文件初始大小都是100M，所以表空间的初始大小是200M。</p>
 <table>
