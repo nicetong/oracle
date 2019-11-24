@@ -47,13 +47,12 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><a name="_Toc22118"></a><strong><strong>微信小程序甜点商城</strong></strong></p>
-<ol>
-<li><a name="_Toc3481"></a>甜点商城ER模型</li>
-</ol>
+<p><a name="_Toc22118"></a><strong><strong><h1>微信小程序甜点商城</h1></strong></strong></p>
+
+<a name="_Toc3481"></a><h1>1.甜点商城ER模型</h1>
 <p>本系统基于微信小程序的甜点商城系统，主要针对于大学生线上购买的小程序，服务于特定的某一个商家。如果商家在美团或则是饿了么平台上来卖东西的话，则会收取昂贵的平台费，本来大学生的消费就不是很高，再加上平台费，可能在外卖上点甜点就不是很现实。如果有了微信小程序的甜点线上商城，少了平台费，就可以在价格上面带来很大的优势。</p>
 <p>&nbsp;</p>
-<p><a name="_Toc28190"></a>1.1实体模型&nbsp;</p>
+<h2><a name="_Toc28190"></a>1.1实体模型&nbsp;</h2>
 <p>根据应用场景分析，共有5个原始的实体(Entity)，它们是管理员、用户、会员、订单和甜点。</p>
 <p>管理员(admin)包括管理员id（admin_id）、联系电话（tel）、管理员名（admin_username）和管理员密码(password)，如图1-1。
 </p>
@@ -893,7 +892,7 @@
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p>向订单表中加入50000条数据</p>
+<h2>向订单表中加入50000条数据</h2>
 <table>
 <tbody>
 <tr>
@@ -913,7 +912,7 @@
 </table>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>查询插入的数据</p>
+<h2>查询插入的数据</h2>
 <table>
 <tbody>
 <tr>
@@ -986,7 +985,7 @@
 <ol start="7">
 <li><a name="_Toc16264"></a>创建程序包、函数和过程</li>
 </ol>
-<p>7.1创建一个存储过程，修改admin表中的admin_name字段。</p>
+<h1>7.1创建一个存储过程，修改admin表中的admin_name字段。</h1>
 <table>
 <tbody>
 <tr>
@@ -1021,7 +1020,7 @@
 <p>&nbsp;</p>
 <p><img src='./images/7-2.png'>图 7-2&nbsp;甜点商城测试更新管理员密码的存储过程</p>
 <p>&nbsp;</p>
-<p>7.2创建一个存储过程，修改admin表中的tel字段。</p>
+<h1>7.2创建一个存储过程，修改admin表中的tel字段。</h1>
 <table>
 <tbody>
 <tr>
@@ -1059,7 +1058,7 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>7.3创建一个存储过程，查看admin表中根据admin_id查询出admin的name</p>
+<h1>7.3创建一个存储过程，查看admin表中根据admin_id查询出admin的name</h1>
 <table>
 <tbody>
 <tr>
@@ -1097,7 +1096,7 @@
 <p><img src='./images/7-6.png'>图 7-6&nbsp;甜点商城测试查看管理员name的存储过程</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>7.4创建程序包</p>
+<h1>7.4创建程序包</h1>
 <p>本系统设计了一些函数及过程，共用的一些程序包放在程序包MyPack中。其他的程序包放在自己的包中。包用于组合逻辑相关的过程和函数，它由包规范和包体两个部分组成。包规范用于定义公用的常量、变量、过程和函数，创建包规范可以使用CREATE PACKAGE命令，创建包体可以使用CREATE PACKAGE BODY。</p>
 <table>
 <tbody>
@@ -1414,7 +1413,7 @@
 <p>/home/oracle/rman_backup/c-1392946895-20191120-01是参数文件(SPFILE)和控制文件(Control File)的备份集</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><a name="_Toc27829"></a>8.2备份后修改数据</p>
+<h1><a name="_Toc27829"></a>8.2备份后修改数据</h1>
 <table>
 <tbody>
 <tr>
@@ -1490,8 +1489,8 @@
 <p>&nbsp;</p>
 <p><img src='./images/8-5.png'>图 8-5 甜点商城删除数据库文件</p>
 <p>&nbsp;</p>
-<p><a name="_Toc16384"></a>8.4数据库完全恢复</p>
-<p><a name="_Toc23505"></a>8.4.1重启损坏的数据库到mount状态</p>
+<h1><a name="_Toc16384"></a>8.4数据库完全恢复</h1>
+<h2><a name="_Toc23505"></a>8.4.1重启损坏的数据库到mount状态</h2>
 <p>通过shutdown immediate无法正常关闭数据库，只能通过shutdown abort强制关闭。然后将数据库启动到mount状态。</p>
 <table>
 <tbody>
@@ -1528,7 +1527,7 @@
 </table>
 <p>&nbsp;</p>
 <p><img src='./images/8-6.png'>图 8-6 甜点商城重启损坏的数据库到mount状态</p>
-<p><a name="_Toc22671"></a>8.4.2开始恢复数据库</p>
+<h2><a name="_Toc22671"></a>8.4.2开始恢复数据库</h2>
 <table>
 <tbody>
 <tr>
@@ -1567,8 +1566,8 @@
 </table>
 <p>&nbsp;</p>
 <p>由以上查询结果可见，数据100%恢复了!</p>
-<p><a name="_Toc29775"></a>9.数据库DataGuard设计</p>
-<p><a name="_Toc29906"></a>9.1oracle 12C dataguard搭建环境（主从库相同，从库只装软件不建库）</p>
+<h1><a name="_Toc29775"></a>9.数据库DataGuard设计</h1>
+<h1><a name="_Toc29906"></a>9.1oracle 12C dataguard搭建环境（主从库相同，从库只装软件不建库）</h1>
 <table>
 <tbody>
 <tr>
@@ -1600,8 +1599,8 @@
 </table>
 <p>&nbsp;</p>
 <p><img src='./images/9-1.png'>图 9-1 甜点商城查看OS和ORACLE配置信息</p>
-<p><a name="_Toc17157"></a>9.2 dataguard主库参数配置</p>
-<p>9.2.1检查主库状态，pdb是否为open</p>
+<h1><a name="_Toc17157"></a>9.2 dataguard主库参数配置</h1>
+<h2>9.2.1检查主库状态，pdb是否为open</h2>
 <table>
 <tbody>
 <tr>
@@ -1626,7 +1625,7 @@
 </table>
 <p>&nbsp;</p>
 <p><img src='./images/9-2.png'>图 9-2 甜点商城查看检查主库状态</p>
-<p>9.2.2检查主库是否开启force_logging，否则要执行以下命令</p>
+<h2>9.2.2检查主库是否开启force_logging，否则要执行以下命令</h2>
 <table>
 <tbody>
 <tr>
@@ -1646,7 +1645,7 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p><img src='./images/9-3.png'>图 9-3 甜点商城查看检查主库是否开启force_logging</p>
-<p>9.2.3检查主库归档模式开启情况</p>
+<h2>9.2.3检查主库归档模式开启情况</h2>
 <table>
 <tbody>
 <tr>
@@ -1667,7 +1666,7 @@
 <p><img src='./images/9-4.png'>图 9-4 甜点商城查看检查主库检查主库归档模式开启情况</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>9.2.4检查在线日志redolog，确认member和group#，根据在线日志添加standby logfile（以下操作均在CBD下操作）</p>
+<h2>9.2.4检查在线日志redolog，确认member和group#，根据在线日志添加standby logfile（以下操作均在CBD下操作）</h2>
 <table>
 <tbody>
 <tr>
@@ -1701,9 +1700,9 @@
 </tbody>
 </table>
 <p>&nbsp;</p>
-<p><a name="_Toc13480"></a>9.3.配置两个数据库的网络参数文件tnsname.ora和listener.ora</p>
+<h1><a name="_Toc13480"></a>9.3.配置两个数据库的网络参数文件tnsname.ora和listener.ora</h1>
 <p>primary和Standby上的tnsnames.ora相同。</p>
-<p><a name="_Toc10426"></a>9.3.1配置tnsnames.ora参数文件</p>
+<h2><a name="_Toc10426"></a>9.3.1配置tnsnames.ora参数文件</h2>
 <table>
 <tbody>
 <tr>
@@ -1744,7 +1743,7 @@
 </tr>
 </tbody>
 </table>
-<p><a name="_Toc6270"></a>9.3.2配置监听文件</p>
+<h2><a name="_Toc6270"></a>9.3.2配置监听文件</h2>
 <table>
 <tbody>
 <tr>
@@ -1779,9 +1778,9 @@
 </tr>
 </tbody>
 </table>
-<p><a name="_Toc12407"></a>9.4.配置数据库参数文件</p>
+<h1><a name="_Toc12407"></a>9.4.配置数据库参数文件</h1>
 <p>注意：数据库参数文件的调整时注意PDB和CDB的切换运行，否则会报如下错误</p>
-<p>9.4.1主库配置完后参数文件：如下（如果是从pfile指定文件启动，启动完成后要创建spfile文件）</p>
+<h2>9.4.1主库配置完后参数文件：如下（如果是从pfile指定文件启动，启动完成后要创建spfile文件）</h2>
 <table>
 <tbody>
 <tr>
@@ -1831,8 +1830,8 @@
 </tr>
 </tbody>
 </table>
-<p>9.4.2将主库修改后的参数文件传送到备库</p>
-<p>9.4.3修改从库数据库参数文件并使用该参数文件从pfile启动</p>
+<h2>9.4.2将主库修改后的参数文件传送到备库</h2>
+<h2>9.4.3修改从库数据库参数文件并使用该参数文件从pfile启动</h2>
 <table>
 <tbody>
 <tr>
@@ -1850,7 +1849,7 @@
 </tr>
 </tbody>
 </table>
-<p>9.4.4主库密码文件传送到备库</p>
+<h2>9.4.4主库密码文件传送到备库</h2>
 <table>
 <tbody>
 <tr>
@@ -1860,8 +1859,8 @@
 </tr>
 </tbody>
 </table>
-<p><a name="_Toc4398"></a>9.5.启动standby database到nomount状态</p>
-<p><a name="_Toc6614"></a>9.5.1检查tns连接名是否正常(主备库均需要检查)</p>
+<h1><a name="_Toc4398"></a>9.5.启动standby database到nomount状态</h1>
+<h2><a name="_Toc6614"></a>9.5.1检查tns连接名是否正常(主备库均需要检查)</h2>
 <table>
 <tbody>
 <tr>
@@ -1873,7 +1872,7 @@
 </tr>
 </tbody>
 </table>
-<p><a name="_Toc20841"></a>9.5.2启动备库</p>
+<h2><a name="_Toc20841"></a>9.5.2启动备库</h2>
 <table>
 <tbody>
 <tr>
@@ -1893,7 +1892,7 @@
 </tr>
 </tbody>
 </table>
-<p><a name="_Toc57"></a>参考文献</p>
+<h2><a name="_Toc57"></a>参考文献</h2>
 <p>[1]Oracle 12c 数据库基础教程[M]. 赵卫东、刘永红，于曦.北京：科学出版社，2017.</p>
 <p>[2]oracle 12C dataguard搭建. <a href="https://blog.csdn.net/s754520480/article/details/79789771"><u>https://blog.csdn.net/s754520480/article/details/79789771</u></a></p>
 <p>[3]Oracle 数据库应用. &nbsp;<a href="https://github.com/zwdcdu/oracle"><u>https://github.com/zwdcdu/oracle</u></a></p>
