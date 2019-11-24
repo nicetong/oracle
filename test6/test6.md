@@ -785,9 +785,7 @@
 </tbody>
 </table>
 <p>&nbsp;</p>
-<ol start="5">
-<li><a name="_Toc16178"></a>创建表，约束和索引</li>
-</ol>
+<a name="_Toc16178"></a><h1>创建表，约束和索引</h1>
 <p>用户和空间分配完成后，可以创建表，约束和索引了。创建表的命令是 CREATE TABLE，由于命令参数和选项很复杂，命令行数非常多，所以这里就不将创建表的 DDL语句全部写出来。这里仅对 ORDERS 和 DESERT两个表的创建作一些说明，ORDERS 表按分区存储，分区类型选择&ldquo;RANG&rdquo;范围分区，创建 ORDERS 表的部分语句是：</p>
 <table>
 <tbody>
@@ -937,9 +935,7 @@
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<ol start="6">
-<li><a name="_Toc22832"></a>创建触发器、序列和视图</li>
-</ol>
+<a name="_Toc22832"></a><h1>创建触发器、序列和视图</h1>
 <p>&nbsp;</p>
 <p>主要用于级联更新，如更新users表中的users_id时，member表的user_id也更新。</p>
 <table>
@@ -976,9 +972,7 @@
 <p>&nbsp;</p>
 <p><img src='./images/6-2.png'>图 6-2 甜点商城创建序列</p>
 <p>&nbsp;</p>
-<ol start="7">
-<li><a name="_Toc16264"></a>创建程序包、函数和过程</li>
-</ol>
+<a name="_Toc16264"></a><h1>创建程序包、函数和过程</h1>
 <h1>7.1创建一个存储过程，修改admin表中的admin_name字段。</h1>
 <table>
 <tbody>
