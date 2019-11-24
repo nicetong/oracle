@@ -1100,7 +1100,7 @@
 </table>
 <p>&nbsp;</p>
 <p><img src='./images/7-7.png'>图 7-7&nbsp;甜点商城创建关于admin表的程序包</p>
-<p>创建关于admin表程序包admin_pkg的包体：</p>
+<h1>创建关于admin表程序包admin_pkg的包体：</h1>
 <table>
 <tbody>
 <tr>
