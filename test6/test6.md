@@ -73,7 +73,7 @@
 <p>&nbsp;</p>
 <p><img src='./images/1-5.png'>图 1-5&nbsp;订单（order）实体</p>
 <p>&nbsp;</p>
-<p><a name="_Toc31586"></a>1.2实体联系模型&nbsp;</p>
+<h1><a name="_Toc31586"></a>1.2实体联系模型&nbsp;</h1>
 <p>管理员和甜点的关系是一对多的关系，在这个商城系统，只有一个管理员账号，每个员工可以登录这个管理员账号对商品的甜点信息进行增删查改。</p>
 <p>&nbsp;</p>
 <p><img src='./images/1-6.png'>图 1-6 管理员与甜点的关系简图</p>
@@ -90,9 +90,7 @@
 <p>&nbsp;</p>
 <p><img src='./images/1-10.png'>图 1-10 &nbsp;甜点商城ER图</p>
 <p>&nbsp;</p>
-<ol start="2">
-<li><a name="_Toc26089"></a>甜点商城数据表的设计</li>
-</ol>
+<a name="_Toc26089"></a><h1>甜点商城数据表的设计</h1>
 <p>ER模型建立好以后，我们就可以设计Oracle的关系表了。在独立实体中找出主要属性设置为主键，比如在订单表中，订单编号（order_id）是主键。由关系派生出的实体要加入外键关系，如订单中要加入外键用户id（user_id）属性。</p>
 <p>管理员（admin）表包括管理员id（admin_id）、联系电话(tel)、管理员名（admin_name）、管理员密码（password）,见表2-1。</p>
 <p>表 2-1 &nbsp;甜点商城管理员ADMIN</p>
